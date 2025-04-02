@@ -1,0 +1,151 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --accent-color: #4a90e2;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e4e4e4;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--accent-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Section styling */
+.section {
+    padding: 50px 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Project Styling */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.project-card {
+    background: var(--accent-color);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: calc(50% - 15px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-card a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Course Styling */
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.course-card {
+    background: var(--accent-color);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: calc(50% - 15px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.course-card a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-card {
+    background: var(--accent-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .project-card {
+        width: 100%;
+    }
+}
+/* PDFs Section */
+.pdf-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pdf-list li {
+    margin-bottom: 15px;
+}
+
+.pdf-list li a {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pdf-list li a:hover {
+    text-decoration: underline;
+    color: darken(var(--accent-color), 10%);
+}
